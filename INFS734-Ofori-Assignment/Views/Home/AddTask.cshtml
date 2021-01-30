@@ -1,0 +1,52 @@
+﻿@model INFS734_Ofori_Assignment.Models.Task
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>New Task</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel panel-success container">
+        <div class="panel-heading text-center"></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="SaveTask" method="post">
+                <h2>Create a task</h2>
+                <div asp-validation-summary="All"></div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" asp-for="DueDate">Due Date:</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" asp-for="DueDate" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" asp-for="DueTime">Due Time:</label>
+                    <div class="col-sm-4">
+                        <input class="form-control" asp-for="DueTime" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" asp-for="Title">Task Title:</label>
+                    <div class="col-sm-8">
+                        <input class="form-control" asp-for="Title" />
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label" asp-for="Description">Task Description:</label>
+                    <div class="col-sm-8">
+                        <textarea class="form-control" asp-for="Description"></textarea>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button type="submit">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

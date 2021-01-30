@@ -1,0 +1,41 @@
+﻿@model IEnumerable<INFS734_Ofori_Assignment.Models.Task>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Responses</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel-body container">
+        <h2>Here's your to do list</h2>
+        <table class="table table-sm table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Due Date/Time</th>
+                    <th>Title</th>
+                    <th>Task Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (INFS734_Ofori_Assignment.Models.Task r in Model)
+                {
+                    <tr>
+                        <td>@r.DueDate @r.DueTime</td>
+                        <td>@r.Title</td>
+                        <td>@r.Description</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <br><br>
+        <div class="text-center">
+            <a class="btn btn-primary" asp-action="AddTask">Add Task</a>
+        </div>
+    </div>
+</body>
+</html>

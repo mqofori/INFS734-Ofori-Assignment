@@ -1,0 +1,20 @@
+﻿@model INFS734_Ofori_Assignment.Models.Task
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Task added!</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="container text-center">
+        <p>
+            <h3>A new task "@Model.Title" has been created successfully</h3>
+        </p>
+        <p>Click  <a class="navbar-link" asp-action="">here</a> to see a full list of current taks</p>
+    </div>
+</body>
+</html>
